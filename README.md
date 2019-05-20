@@ -1,2 +1,2 @@
-# feqa
+# feqa.js
 Frontend QA

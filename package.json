@@ -7,7 +7,7 @@
     "author": "Edmonds Commerce",
     "license": "MIT",
     "bin": {
-        "feqa": "./bin/feqa.js"
+        "feqa": "bin/feqa"
     },
     "dependencies": {
         "eslint": "^5.16.0",

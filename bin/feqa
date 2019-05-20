@@ -1,9 +1,22 @@
-#!/usr/bin/env node
-let paths = require("../src/Paths");
-let eslint = require("../src/Eslint");
+#!/usr/bin/env bash
+readonly DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+cd $DIR;
+set -e
+set -u
+set -o pipefail
+standardIFS="$IFS"
+IFS=$'\n\t'
+echo "
+===========================================
+$(hostname) $0 $@
+===========================================
+"
 
-const root = paths.getRoot();
 
-console.log("Running ESLint with Prettier autofixing");
-eslint(root);
-console.log("Success");
+
+
+echo "
+----------------
+$(hostname) $0 completed
+----------------
+"
