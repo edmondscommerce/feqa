@@ -1,0 +1,8 @@
+{
+  "name": "feqa",
+  "version": "0.0.1",
+  "description": "Frontend QA Pipeline",
+  "main": "index.js",
+  "author": "Edmonds Commerce",
+  "license": "MIT"
+}
