@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+let paths = require('../src/Paths')
+let eslint = require('../src/Eslint')
+
+const root = paths.getRoot()
+
+eslint(root)
