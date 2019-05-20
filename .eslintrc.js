@@ -4,7 +4,6 @@ module.exports = {
     'es6': true
   },
   'extends': 'plugin:prettier/recommended',
-  'plugins': [],
   'globals': {
     'Atomics': 'readonly',
     'SharedArrayBuffer': 'readonly'

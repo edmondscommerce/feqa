@@ -1,8 +1,9 @@
 #!/usr/bin/env node
+let paths = require("../src/Paths");
+let eslint = require("../src/Eslint");
 
-let paths = require('../src/Paths')
-let eslint = require('../src/Eslint')
+const root = paths.getRoot();
 
-const root = paths.getRoot()
-
-eslint(root)
+console.log("Running ESLint with Prettier autofixing");
+eslint(root);
+console.log("Success");
