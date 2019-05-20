@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-readonly DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 cd $DIR;
 set -e
 set -u
@@ -21,10 +27,41 @@ source ./../includes/functions.inc.bash
 
 #### CONFIG ##################################################
 
+# project root directory
+if [[ -d $DIR/../node_modules ]]
+then
+    projectRoot="$(readlink -f $DIR/../)"
+else
+    projectRoot="$(readlink -f $DIR/../../../)"
+fi
+
+# the path in the project to check for config
+projectConfigPath="$projectRoot/qaConfig/"
+
+# Which platform is the code to be tested
+platform="$(detectPlatform)"
+echo "$platform platform detected"
+
 # If a CI variable is set, we use that, otherwise default to false.
 # Travis-CI sets a CI variable. You can eaisly set this in any other CI system
 # The value should the the string 'true' if this is CI
 CI=${CI:-'false'}
+
+echo "
+
+Setting feqa Config
+--------------------
+"
+runTool setConfig;
+
+echo "
+
+Running eslint
+--------------------
+"
+runTool eslint;
+
+
 
 echo "
 ----------------

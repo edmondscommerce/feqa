@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+readonly platformGeneric="generic"
+
+################################################################
+# Can add other platforms as required
+function detectPlatform(){
+    echo $platformGeneric
+}
+
 ################################################################
 # Run a tool
 # First check for a project qaConfig tool override
@@ -31,9 +39,8 @@ function runCommand() {
     "$@";
     local exitCode=$?;
     set +x
-    echo;
 
-    return "$exitCode";
+    printf "$exitCode";
 }
 ################################################################
 # Get the path for a config file
