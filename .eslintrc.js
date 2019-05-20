@@ -3,7 +3,8 @@ module.exports = {
     'browser': true,
     'es6': true
   },
-  'extends': 'standard',
+  'extends': 'plugin:prettier/recommended',
+  'plugins': [],
   'globals': {
     'Atomics': 'readonly',
     'SharedArrayBuffer': 'readonly'
@@ -13,5 +14,6 @@ module.exports = {
     'sourceType': 'module'
   },
   'rules': {
+    
   }
 };
