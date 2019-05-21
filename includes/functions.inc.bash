@@ -46,8 +46,8 @@ function runCommand() {
 # Get the path for a config file
 # Config file will be search for in:
 #   A qaConfig folder in the project root
-#   The phpqa library's configDefaults/{platform}
-#   The phpqa library's configDefaults/generic
+#   The feqa library's configDefaults/{platform}
+#   The feqa library's configDefaults/generic
 #
 # Usage:
 #

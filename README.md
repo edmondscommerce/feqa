@@ -1,5 +1,6 @@
 # FrontEnd Quality Assurance
 ## By [Edmonds Commerce](https://www.edmondscommerce.co.uk)
+## Inspired by [PHP QA](https://github.com/edmondscommerce/phpqa/)
 
 ## Introduction
 
