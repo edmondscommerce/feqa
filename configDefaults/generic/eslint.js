@@ -5,8 +5,9 @@ module.exports = {
   },
   'extends': [
       'plugin:@typescript-eslint/recommended',
-      // 'plugin:prettier/recommended',
-      'plugin:vue/recommended'
+      'prettier/@typescript-eslint',
+      'plugin:prettier/recommended',
+      'plugin:vue/recommended',
   ],
   'globals': {
     'Atomics': 'readonly',
