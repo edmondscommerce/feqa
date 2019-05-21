@@ -1,5 +1,5 @@
 {
-    "name": "feqa",
+    "name": "@edmondscommerce/feqa",
     "version": "0.0.1",
     "description": "Frontend QA Pipeline",
     "repository": "https://github.com/edmondscommerce/feqa",
