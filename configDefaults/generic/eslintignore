@@ -1,2 +1,5 @@
-*.min.js
-node_modules
+**/*.min.js
+**/bower_compoents
+**/node_modules
+**/vendor
+public/js/*
