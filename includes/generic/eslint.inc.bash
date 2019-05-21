@@ -10,10 +10,9 @@ do
         --debug \
         -c "$eslintConfigPath" \
         --ignore-path "$projectRoot/.gitignore" \
-        --ext .js,.vue \
         --cache \
         --cache-location "$cacheDir" \
-        "$projectRoot/**/*.js"
+        "$projectRoot/**/*.{js,vue}"
     set +x;
     eslintExitCode=$?
     if (( $eslintExitCode > 0 ))
