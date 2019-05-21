@@ -1,4 +1,4 @@
-{
+module.exports = {
     "moduleFileExtensions": [
         "js",
         "json",
@@ -8,5 +8,7 @@
     "transform": {
         ".*\\.(vue)$": "vue-jest",
         "^.+\\.tsx?$": "ts-jest"
-    }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": ["**/*.{js,vue}", "!**/node_modules/**"]
 }

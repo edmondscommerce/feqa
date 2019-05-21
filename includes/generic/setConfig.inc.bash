@@ -20,4 +20,4 @@ defaultConfigPath="$(readlink -f ./../configDefaults/)"
 CI=${CI:-'false'}
 
 eslintConfigPath="$(configPath eslint.js)";
-jestConfigPath="$(configPath jest.json)";
+jestConfigPath="$(configPath jest.js)";
