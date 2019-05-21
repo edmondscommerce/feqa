@@ -21,7 +21,8 @@ function usage {
     echo " - use -p to specify a specific path to scan"
     echo ""
     echo " - use -t to specify a single tool:"
-#    echo "     psr|psr4                   psr4 validation"
+    echo "     lint|eslint                   ES Linting and fixing"
+    echo "     jest|jest                     Jest testing framework"
     exit 1
 }
 
@@ -44,7 +45,8 @@ done
 if [[ "" != "$singleToolToRun" ]]
 then
     case "$singleToolToRun" in
-#        psr | psr4                  ) singleToolToRun="psr4Validate";;
+        lint | eslint                  ) singleToolToRun="eslint";;
+        jest | jtest                  ) singleToolToRun="jest";;
         * )
             printf "\nERROR:\nInvalid tool: $singleToolToRun\n\n" >&2
             usage

@@ -54,6 +54,17 @@ Setting feqa Config
 "
 runTool setConfig;
 
+if [[ "" != "$singleToolToRun" ]]
+then
+    echo "
+
+Running Single Tool: $singleToolToRun
+------------------------
+"
+    runTool "$singleToolToRun"
+    exit $?
+fi
+
 echo "
 
 Running eslint
@@ -61,7 +72,12 @@ Running eslint
 "
 runTool eslint;
 
+echo "
 
+Running Jest
+--------------------
+"
+runTool jest;
 
 echo "
 ----------------
