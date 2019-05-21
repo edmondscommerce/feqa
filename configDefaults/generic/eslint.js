@@ -3,10 +3,9 @@ module.exports = {
     'browser': true,
     'es6': true
   },
-  'parser':  '@typescript-eslint/parser',
   'extends': [
       'plugin:@typescript-eslint/recommended',
-      'plugin:prettier/recommended',
+      // 'plugin:prettier/recommended',
       'plugin:vue/recommended'
   ],
   'globals': {
@@ -14,6 +13,7 @@ module.exports = {
     'SharedArrayBuffer': 'readonly'
   },
   'parserOptions': {
+    'parser':  '@typescript-eslint/parser',
     'ecmaVersion': 2018,
     'sourceType': 'module'
   },

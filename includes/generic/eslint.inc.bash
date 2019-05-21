@@ -12,7 +12,8 @@ do
         --ignore-path "$projectRoot/.gitignore" \
         --cache \
         --cache-location "$cacheDir" \
-        "$projectRoot/**/*.{js,vue}"
+        --fix \
+        "$projectRoot/**/*.{js,vue,ts}"
     set +x;
     eslintExitCode=$?
     if (( $eslintExitCode > 0 ))
